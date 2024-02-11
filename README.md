@@ -28,7 +28,7 @@
 	<ul> 
 		<li>By default, the mod replaces the following units in campaign with:</li>
 		<li>M113 is replaced with M2 Bradley</li>
-		<li>T-55A is T-72M Gills replaced with </li>
+		<li>T-55A is replaced with T-72M Gills</li>
 		<li>T-72M is replaced with T-72M1</li>
 		<li>T-72M Gills is replaced with T-72M1</li>
 		<li>Soviet Army BMP-1/P is replaced with BMP-2</li>
