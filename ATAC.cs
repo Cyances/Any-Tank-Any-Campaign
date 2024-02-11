@@ -116,7 +116,6 @@ namespace ATAC
             bmp1p_sa_chance = cfg.CreateEntry("SA BMP-1P replacement chance", 100);
             t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64A");
             t64a_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
-            //
         }
 
         [HarmonyPatch(typeof(GHPC.Mission.DynamicMissionComposer), "GetFirstRegisteredKeyForSpawnPoint")]
