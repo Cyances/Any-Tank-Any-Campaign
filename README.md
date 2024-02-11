@@ -34,6 +34,7 @@
 		<li>Soviet Army BMP-1/P is replaced with BMP-2</li>
 		<li>To replace the unit in campaign, simply enter the config unit name (refer to table) on the unit that you want to replace and indicate the chance for the replacement to happen</li>
 		<li>Units listed in the config file are the ones that spawn in vanilla campaign</li>
+		<li>If you are running other mods that changes the unit itself such as Abrams or T-72 mods, then the modified version will appear in campaign.</li>
 	</ul>
 </p>
 
