@@ -15,7 +15,7 @@
 ## Installation:
 1.) Install [MelonLoader v0.6.1](https://github.com/LavaGang/MelonLoader/).
 
-2.) Download the latest version from the [release page](https://github.com/Cyances/M1A1AbramsAMP/releases).
+2.) Download the latest version from the [release page](https://github.com/Cyances/Any-Tank-Any-Campaign/releases).
 
 3.) Place ATAC.dll file in the mods folder:
 
