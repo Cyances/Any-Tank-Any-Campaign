@@ -1,4 +1,4 @@
-# Any Tank Any Campaign
+![image](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/6f824448-42f2-4d55-bbb8-42cf509792a0)![image](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/cb92fdce-b3fe-4bde-8679-504be8b712ad)# Any Tank Any Campaign
 
 ## ATAC v0.1 Beta:
 <p>
@@ -29,13 +29,41 @@
 		<li>T-72M Gills is replaced with T-72M1</li>
 		<li>Soviet Army BMP-1/P is replaced with BMP-2</li>
 		<li>To replace the unit in campaign, simply enter the config unit name (refer to table) on the unit that you want to replace and indicate the chance for the replacement to happen</li>
+		<li>Units listed in the config file are the ones that spawn in vanilla campaign</li>
 	</ul>
 </p>
 
 
-| Config Unit Name  | Penetration (mm) |
+| Config Unit Name  | Unit Name |
 | ------------- | ------------- |
 | NATO |  | 
-| M923 | M923 Logistics Truck | 
+| M923 | M923 Truck | 
+| M113 | M113 | 
+| M2BRADLEY | M2 Bradley | 
+| M60A1RISEP | M60A1 RISE Passive | 
+| M60A3TTS | M60A3 TTS | 
+| M1 | M1 | 
+| M1IP | M1IP | 
+| NVA |  | 
+| URAL375D | Ural-375D Truck | 
+| BTR60PB | SPW-60B | 
+| BMP1 | BMP-1 | 
+| BMP1P | BMP-1P | 
+| BMP2 | BMP-2 | 
+| T55A | T-55A | 
+| T72 | T-72M | 
+| T72MGILLS | T-72M with (deployed) gills | 
+| T72A | T-72M1 | 
+| SA |  | 
+| URAL375D_SA | Soviet Army Ural-375D Truck | 
+| BTR60PB_SA | Soviet Army BTR-60PB | 
+| BMP1_SA | Soviet Army BMP-1 | 
+| BMP1P_SA | Soviet Army BMP-1P | 
+| BMP2_SA | Soviet Army BMP-2 | 
+| T64A | T-64A | 
+| Bonus |  | 
+| UAZ469 | UAZ-469 | 
+| T3485 | T-34-85 | 
+| TC | Target Cheese | 
 
 ![Screenshot_5](https://raw.githubusercontent.com/Cyances/M1A1AbramsAMP/master/Images/AMP%20MelonPreferences%20v2.PNG)
