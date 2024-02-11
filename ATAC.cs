@@ -70,7 +70,7 @@ namespace ATAC
             m923_replace = cfg.CreateEntry("M923 replacement", "M923");
             m923_replace.Description = "////NATO////";
             m923_chance = cfg.CreateEntry("M923 replacement chance", 100);
-            m113_replace = cfg.CreateEntry("M113 replacement", "M113");
+            m113_replace = cfg.CreateEntry("M113 replacement", "M2BRADLEY");
             m113_chance = cfg.CreateEntry("M113 replacement chance", 100);
             m2_replace = cfg.CreateEntry("M2 replacement", "M2BRADLEY");
             m2_chance = cfg.CreateEntry("M2 replacement chance", 100);
