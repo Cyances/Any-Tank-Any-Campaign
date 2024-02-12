@@ -1,9 +1,10 @@
 ## ATAC v0.1 Beta:
 <p>
 	<ul>
-	<li>Choose what vehicle should appear in campaign.</li>
-	<li>Setup your East vs East battles, Violet vs Voilet, T-34s vs M60s and so on</li>
+	<li>Choose what vehicle should appear in campaign</li>
+	<li>Setup your East vs East battles, Violet vs Violet, T-34s vs M60s and so on</li>
 	<li>Inspired by the ACAT mod for DiRT 3</i>
+	<li>Instant action units are not replaced</li>
 </p>
 
 ![Gunner Heat Pc Screenshot 2024 02 11 - 23 58 08 33](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/8eb386a3-0a09-4f7f-a6e3-5ba45f1f829b)
