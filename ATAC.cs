@@ -10,7 +10,7 @@ using UnityEngine;
 using System.Reflection;
 using BehaviorDesigner.Runtime.Tasks.Unity.UnityString;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "Beta 0.1", "Cyance")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign Beta", "0.1.1", "Cyance")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
