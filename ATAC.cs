@@ -209,7 +209,7 @@ namespace ATAC
                 }
 
                 bool is_T72MGILLS = __result == "T72MGILLS";
-                if (is_T72M && UnityEngine.Random.Range(1, 100) <= t72mgills_chance.Value)
+                if (is_T72MGILLS && UnityEngine.Random.Range(1, 100) <= t72mgills_chance.Value)
                 {
                     __result = t72mgills_replace.Value;
                 }
