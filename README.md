@@ -12,6 +12,12 @@
 ![Gunner Heat Pc Screenshot 2024 02 11 - 22 18 26 56](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/31e252af-d3d3-4dd2-9c13-a68a18957ac6)
 ![image](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/ef0f0674-3e27-4599-97ca-0be655e5327f)
 
+## Note!
+<p>
+	<ul>
+	<li>Known issue: When also using tanks from the opposing side (ie M1 vs M1 or T-72 vs T-72), there is a chance that you can control <i>all</i> the available units in the mission</li>
+	<li>Be careful when switching units (you'll know it's yours if the platoon is numbered [like 4th Platoon] because you might not be able to return to your actual side</li>
+</p>
 
 ## Installation:
 1.) Install [MelonLoader v0.6.1](https://github.com/LavaGang/MelonLoader/).
