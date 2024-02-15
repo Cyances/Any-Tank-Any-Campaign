@@ -1,9 +1,10 @@
-## ATAC v0.1 Beta:
+## ATAC v0.1 Beta (Initial Release):
 <p>
 	<ul>
-	<li>Choose what vehicle should appear in campaign.</li>
-	<li>Setup your East vs East battles, Violet vs Voilet, T-34s vs M60s and so on</li>
+	<li>Choose what vehicle should appear in campaign</li>
+	<li>Setup your East vs East battles, Violet vs Violet, T-34s vs M60s and so on</li>
 	<li>Inspired by the ACAT mod for DiRT 3</i>
+	<li>Instant action units are not replaced</li>
 </p>
 
 ![Gunner Heat Pc Screenshot 2024 02 11 - 23 58 08 33](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/8eb386a3-0a09-4f7f-a6e3-5ba45f1f829b)
@@ -34,6 +35,7 @@
 		<li>Soviet Army BMP-1/P is replaced with BMP-2</li>
 		<li>To replace the unit in campaign, simply enter the config unit name (refer to table) on the unit that you want to replace and indicate the chance for the replacement to happen</li>
 		<li>Units listed in the config file are the ones that spawn in vanilla campaign</li>
+		<li>If you are running other mods that changes the unit itself such as Abrams or T-72 mods, then the modified version will appear in campaign.</li>
 	</ul>
 </p>
 
