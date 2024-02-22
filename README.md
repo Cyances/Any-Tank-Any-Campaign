@@ -10,8 +10,7 @@
 ![Gunner Heat Pc Screenshot 2024 02 09 - 22 07 43 16](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/2d6fb03b-cb73-4bb5-9dc6-da36ef40f38d)
 ![Gunner Heat Pc Screenshot 2024 02 11 - 22 18 26 56](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/31e252af-d3d3-4dd2-9c13-a68a18957ac6)
 ![image](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/ef0f0674-3e27-4599-97ca-0be655e5327f)
-
-
+		
 ## Installation:
 1.) Install [MelonLoader v0.6.1](https://github.com/LavaGang/MelonLoader/).
 
@@ -37,6 +36,12 @@
 	</ul>
 </p>
 
+## Note!
+<p>
+	<li>Known bug: When using same units from the opposing side (ie M1 vs M1), there is a chance that you can control <i>all</i> the available units in the mission</li>
+	<li>Be careful when switching units (you'll know it's yours if the platoon is numbered [like 4th Platoon] because you might not be able to return to your actual side</li>
+	<li>This seem to occur when doing NATO vs NATO unit battles</li>
+</p>
 
 | Config Unit Name  | Unit Name |
 | ------------- | ------------- |
@@ -56,6 +61,7 @@
 | BMP1 | BMP-1 | 
 | BMP1P | BMP-1P | 
 | BMP2 | BMP-2 | 
+| PT76 | PT-76B | 
 | T55A | T-55A | 
 | T72 | T-72M | 
 | T72MGILLS | T-72M with (deployed) gills | 
