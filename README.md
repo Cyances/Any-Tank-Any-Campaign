@@ -1,4 +1,4 @@
-## ATAC v0.1 Beta:
+## ATAC v1.0:
 <p>
 	<ul>
 	<li>Choose what vehicle should appear in campaign.</li>
@@ -41,6 +41,7 @@
 | Config Unit Name  | Unit Name |
 | ------------- | ------------- |
 | NATO |  | 
+| STATIC_TOW | TOW Launcher | 
 | M923 | M923 Truck | 
 | M113 | M113 | 
 | M2BRADLEY | M2 Bradley | 
@@ -49,6 +50,7 @@
 | M1 | M1 | 
 | M1IP | M1IP | 
 | NVA |  | 
+| STATIC_9K111 | 9K111 Launcher | 
 | URAL375D | Ural-375D Truck | 
 | BTR60PB | SPW-60B | 
 | BMP1 | BMP-1 | 
@@ -59,11 +61,13 @@
 | T72MGILLS | T-72M with (deployed) gills | 
 | T72A | T-72M1 | 
 | SA |  | 
+| STATIC_9K111_SA | Soviet Army 9K111 Launcher | 
 | URAL375D_SA | Soviet Army Ural-375D Truck | 
 | BTR60PB_SA | Soviet Army BTR-60PB | 
 | BMP1_SA | Soviet Army BMP-1 | 
 | BMP1P_SA | Soviet Army BMP-1P | 
 | BMP2_SA | Soviet Army BMP-2 | 
+| T62 | T-62 | 
 | T64A | T-64A | 
 | Bonus |  | 
 | UAZ469 | UAZ-469 | 
