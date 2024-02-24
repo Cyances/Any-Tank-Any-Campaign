@@ -64,7 +64,7 @@
 | BMP2 | BMP-2 | 
 | PT76 | PT-76B | 
 | T55A | T-55A | 
-| T72 | T-72M | 
+| T72M | T-72M | 
 | T72MGILLS | T-72M with (deployed) gills | 
 | T72A | T-72M1 | 
 | SA |  | 
