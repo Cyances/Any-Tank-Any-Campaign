@@ -37,13 +37,6 @@
 	</ul>
 </p>
 
-## Note!
-<p>
-	<li>Known bug: When using same units from the opposing side (ie M1 vs M1), there is a chance that you can control <i>all</i> the available units in the mission</li>
-	<li>Be careful when switching units (you'll know it's yours if the platoon is numbered [like 4th Platoon] because you might not be able to return to your actual side</li>
-	<li>This seem to occur when doing NATO vs NATO unit battles</li>
-</p>
-
 | Config Unit Name  | Unit Name |
 | ------------- | ------------- |
 | NATO |  | 
@@ -83,3 +76,10 @@
 
 ![ATAC MelonPreferences](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/2fdcdc5a-52b7-4c83-a851-7e61b9250818)
 
+
+## Note!
+<p>
+	<li>Known bug: When using same units from the opposing side (ie M1 vs M1), there is a chance that you can control <i>all</i> the available units in the mission</li>
+	<li>Be careful when switching units (you'll know it's yours if the platoon is numbered [like 4th Platoon] because you might not be able to return to your actual side</li>
+	<li>This seem to occur when doing NATO vs NATO unit battles</li>
+</p>
