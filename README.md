@@ -2,7 +2,7 @@
 <p>
 	<ul>
 	<li>Choose what vehicle should appear in campaign.</li>
-	<li>Setup your East vs East battles, Violet vs Voilet, T-34s vs M60s and so on</li>
+	<li>Setup your East vs East battles, Violet vs Violet, T-34s vs M60s and so on</li>
 	<li>Inspired by the ACAT mod for DiRT 3</i>
 	<li>Instant action units are not replaced</li>
 </p>
