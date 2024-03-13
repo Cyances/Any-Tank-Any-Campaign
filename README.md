@@ -69,6 +69,7 @@
 | BMP2_SA | Soviet Army BMP-2 | 
 | T62 | T-62 | 
 | T64A | T-64A | 
+| T80B | T-80B | 
 | Bonus |  | 
 | UAZ469 | UAZ-469 | 
 | T3485 | T-34-85 | 
