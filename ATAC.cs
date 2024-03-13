@@ -78,6 +78,8 @@ namespace ATAC
         public static MelonPreferences_Entry<int> t62_chance;
         public static MelonPreferences_Entry<string> t64a_replace;
         public static MelonPreferences_Entry<int> t64a_chance;
+        public static MelonPreferences_Entry<string> t80b_replace;
+        public static MelonPreferences_Entry<int> t80b_chance;
         public override void OnInitializeMelon()
         {
             cfg = MelonPreferences.CreateCategory("ATAC Config");
@@ -144,6 +146,8 @@ namespace ATAC
             t62_chance = cfg.CreateEntry("SA T-62 replacement chance", 100);
             t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64A");
             t64a_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
+            t80b_replace = cfg.CreateEntry("SA T-80B replacement", "T80B");
+            t80b_chance = cfg.CreateEntry("SA T-80B replacement chance", 100);
         }
 
         [HarmonyPatch(typeof(GHPC.Mission.DynamicMissionComposer), "GetFirstRegisteredKeyForSpawnPoint")]
@@ -274,6 +278,10 @@ namespace ATAC
                     case "T64A":
                         replace = t64a_replace.Value;
                         chance = t64a_chance.Value;
+                        break;
+                    case "T80B":
+                        replace = t80b_replace.Value;
+                        chance = t80b_chance.Value;
                         break;
                     default:
                         MelonLoader.MelonLogger.Warning("Found a vehicle without a case! Its ID is: " + __result + ". Ignoring.");
