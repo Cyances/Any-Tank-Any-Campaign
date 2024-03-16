@@ -83,4 +83,6 @@
 	<li>Known bug: When using same units from the opposing side (ie M1 vs M1), there is a chance that you can control <i>all</i> the available units in the mission</li>
 	<li>Be careful when switching units (you'll know it's yours if the platoon is numbered [like 4th Platoon] because you might not be able to return to your actual side</li>
 	<li>This seem to occur when doing NATO vs NATO unit battles</li>
+	<li>Known bug: Depending on the mission and if you are using units from the opposite side, you can may not be able to complete the mission because the game thinks the enemy forces are not depleted enough</li>
+	<li>As a work around, you might have to destroy the units you are using from the opposite side or bail out the crew</li>
 </p>
