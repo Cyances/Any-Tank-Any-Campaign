@@ -56,6 +56,7 @@
 | BMP1P | BMP-1P | 
 | BMP2 | BMP-2 | 
 | PT76B | PT-76B | 
+| T54A | T-54A | 
 | T55A | T-55A | 
 | T72M | T-72M | 
 | T72MGILLS | T-72M with (deployed) gills | 
