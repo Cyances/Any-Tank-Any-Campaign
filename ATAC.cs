@@ -10,7 +10,7 @@ using UnityEngine;
 using System.Reflection;
 using BehaviorDesigner.Runtime.Tasks.Unity.UnityString;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.0.0", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.0.2", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -51,6 +51,8 @@ namespace ATAC
         public static MelonPreferences_Entry<int> bmp2_chance;
         public static MelonPreferences_Entry<string> pt76_replace;
         public static MelonPreferences_Entry<int> pt76_chance;
+        public static MelonPreferences_Entry<string> t54a_replace;
+        public static MelonPreferences_Entry<int> t54a_chance;
         public static MelonPreferences_Entry<string> t55a_replace;
         public static MelonPreferences_Entry<int> t55a_chance;
         public static MelonPreferences_Entry<string> t72m_replace;
@@ -118,6 +120,8 @@ namespace ATAC
             bmp2_chance = cfg.CreateEntry("BMP-2 replacement chance", 100);
             pt76_replace = cfg.CreateEntry("PT-76B replacement", "PT76B");
             pt76_chance = cfg.CreateEntry("PT-76B replacement chance", 100);
+            t54a_replace = cfg.CreateEntry("T-54A replacement", "T54A");
+            t54a_chance = cfg.CreateEntry("T-54A replacement chance", 100);
             t55a_replace = cfg.CreateEntry("T-55A replacement", "T72MGILLS");
             t55a_chance = cfg.CreateEntry("T-55A replacement chance", 100);
             t72m_replace = cfg.CreateEntry("T-72M replacement", "T72A");
@@ -225,6 +229,10 @@ namespace ATAC
                     case "PT76":
                         replace = pt76_replace.Value;
                         chance = m923_chance.Value;
+                        break;
+                    case "T54A":
+                        replace = t54a_replace.Value;
+                        chance = t54a_chance.Value;
                         break;
                     case "T55A":
                         replace = t55a_replace.Value;
