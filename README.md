@@ -4,7 +4,7 @@
 	<li>Added replacement entry for T-80B</li>
 	<li>Added replacement entry for T-54A</li>
 	<li>Added replacement entry for T-64B</li>
-	<li>Added replacement entry for BRT-70</li>
+	<li>Added replacement entry for BTR-70</li>
 	</ul>
 </p>
 
