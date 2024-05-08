@@ -10,7 +10,7 @@ using UnityEngine;
 using System.Reflection;
 using BehaviorDesigner.Runtime.Tasks.Unity.UnityString;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.0.2", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.0.3", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -70,6 +70,8 @@ namespace ATAC
         public static MelonPreferences_Entry<int> brdm2_sa_chance;
         public static MelonPreferences_Entry<string> btr60pb_sa_replace;
         public static MelonPreferences_Entry<int> btr60pb_sa_chance;
+        public static MelonPreferences_Entry<string> btr70_replace;
+        public static MelonPreferences_Entry<int> btr70_chance;
         public static MelonPreferences_Entry<string> bmp1_sa_replace;
         public static MelonPreferences_Entry<int> bmp1_sa_chance;
         public static MelonPreferences_Entry<string> bmp1p_sa_replace;
@@ -80,6 +82,8 @@ namespace ATAC
         public static MelonPreferences_Entry<int> t62_chance;
         public static MelonPreferences_Entry<string> t64a_replace;
         public static MelonPreferences_Entry<int> t64a_chance;
+        public static MelonPreferences_Entry<string> t64b_replace;
+        public static MelonPreferences_Entry<int> t64b_chance;
         public static MelonPreferences_Entry<string> t80b_replace;
         public static MelonPreferences_Entry<int> t80b_chance;
         public override void OnInitializeMelon()
@@ -140,6 +144,8 @@ namespace ATAC
             brdm2_sa_chance = cfg.CreateEntry("SA BRDM2 replacement chance", 100);
             btr60pb_sa_replace = cfg.CreateEntry("SA BTR-60PB replacement", "BTR60PB_SA");
             btr60pb_sa_chance = cfg.CreateEntry("SA BTR-60PB replacement chance", 100);
+            btr70_replace = cfg.CreateEntry("SA BTR-70 replacement", "BTR70");
+            btr70_chance = cfg.CreateEntry("SA BTR-70 replacement chance", 100);
             bmp1_sa_replace = cfg.CreateEntry("SA BMP-1 replacement", "BMP1P_SA");
             bmp1_sa_chance = cfg.CreateEntry("SA BMP-1 replacement chance", 100);
             bmp1p_sa_replace = cfg.CreateEntry("SA BMP-1P replacement", "BMP1P_SA");
@@ -148,8 +154,10 @@ namespace ATAC
             bmp2_sa_chance = cfg.CreateEntry("SA BMP-2 replacement chance", 100);
             t62_replace = cfg.CreateEntry("SA T-62 replacement", "T62");
             t62_chance = cfg.CreateEntry("SA T-62 replacement chance", 100);
-            t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64A");
-            t64a_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
+            t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64B");
+            t64a_chance = cfg.CreateEntry("SA T-64B replacement chance", 100);
+            t64b_replace = cfg.CreateEntry("SA T-64B replacement", "T64B");
+            t64b_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
             t80b_replace = cfg.CreateEntry("SA T-80B replacement", "T80B");
             t80b_chance = cfg.CreateEntry("SA T-80B replacement chance", 100);
         }
@@ -267,6 +275,10 @@ namespace ATAC
                         replace = btr60pb_sa_replace.Value;
                         chance = btr60pb_sa_chance.Value;
                         break;
+                    case "BTR70":
+                        replace = btr70_replace.Value;
+                        chance = btr70_chance.Value;
+                        break;
                     case "BMP1_SA":
                         replace = bmp1_sa_replace.Value;
                         chance = bmp1_sa_chance.Value;
@@ -286,6 +298,10 @@ namespace ATAC
                     case "T64A":
                         replace = t64a_replace.Value;
                         chance = t64a_chance.Value;
+                        break;
+                    case "T64B":
+                        replace = t64b_replace.Value;
+                        chance = t64b_chance.Value;
                         break;
                     case "T80B":
                         replace = t80b_replace.Value;

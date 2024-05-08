@@ -1,10 +1,9 @@
-## ATAC v1.0.2:
+## ATAC v1.0.3:
 <p>
 	<ul>
 	<li>Choose what vehicle should appear in campaign.</li>
 	<li>Setup your East vs East battles, Violet vs Violet, T-34s vs M60s and so on</li>
 	<li>Inspired by the ACAT mod for DiRT 3</i>
-	<li>Instant action units are not replaced</li>
 </p>
 
 ![Gunner Heat Pc Screenshot 2024 02 11 - 23 58 08 33](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/8eb386a3-0a09-4f7f-a6e3-5ba45f1f829b)
@@ -65,11 +64,13 @@
 | STATIC_9K111_SA | Soviet Army 9K111 Launcher | 
 | URAL375D_SA | Soviet Army Ural-375D Truck | 
 | BTR60PB_SA | Soviet Army BTR-60PB | 
+| BTR70 | BTR-70 | 
 | BMP1_SA | Soviet Army BMP-1 | 
 | BMP1P_SA | Soviet Army BMP-1P | 
 | BMP2_SA | Soviet Army BMP-2 | 
 | T62 | T-62 | 
 | T64A | T-64A | 
+| T64B | T-64B | 
 | T80B | T-80B | 
 | Bonus |  | 
 | UAZ469 | UAZ-469 | 
