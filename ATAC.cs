@@ -10,7 +10,7 @@ using UnityEngine;
 using System.Reflection;
 using BehaviorDesigner.Runtime.Tasks.Unity.UnityString;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.0.3", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.0.4", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -154,10 +154,10 @@ namespace ATAC
             bmp2_sa_chance = cfg.CreateEntry("SA BMP-2 replacement chance", 100);
             t62_replace = cfg.CreateEntry("SA T-62 replacement", "T62");
             t62_chance = cfg.CreateEntry("SA T-62 replacement chance", 100);
-            t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64B");
-            t64a_chance = cfg.CreateEntry("SA T-64B replacement chance", 100);
+            t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64A");
+            t64a_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
             t64b_replace = cfg.CreateEntry("SA T-64B replacement", "T64B");
-            t64b_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
+            t64b_chance = cfg.CreateEntry("SA T-64B replacement chance", 100);
             t80b_replace = cfg.CreateEntry("SA T-80B replacement", "T80B");
             t80b_chance = cfg.CreateEntry("SA T-80B replacement chance", 100);
         }
