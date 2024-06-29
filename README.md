@@ -71,11 +71,14 @@
 | STATIC_9K111_SA | Soviet Army 9K111 Launcher | 
 | URAL375D_SA | Soviet Army Ural-375D Truck | 
 | BTR60PB_SA | Soviet Army BTR-60PB | 
+| BTR70 | BTR-70 | 
 | BMP1_SA | Soviet Army BMP-1 | 
 | BMP1P_SA | Soviet Army BMP-1P | 
 | BMP2_SA | Soviet Army BMP-2 | 
 | T62 | T-62 | 
 | T64A | T-64A | 
+| T64B | T-64B | 
+| T80B | T-80B | 
 | Bonus |  | 
 | UAZ469 | UAZ-469 | 
 | T3485 | T-34-85 | 
