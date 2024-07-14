@@ -1,4 +1,4 @@
-## ATAC v1.0.4:
+## ATAC v1.1:
 <p>
 	<ul>
 	<li>Choose what vehicle should appear in campaign.</li>
@@ -25,6 +25,7 @@
 ## Mod Configuration (in UserData/MelonPreferences.cfg):
 <p>
 	<ul> 
+		<li>A toggle (false by default) in config if playing campaign</li>
 		<li>By default, the mod replaces the following units in campaign with:</li>
 		<li>M113 is replaced with M2 Bradley</li>
 		<li>T-55A is replaced with T-72M Gills</li>
@@ -48,6 +49,7 @@
 | M1 | M1 | 
 | M1IP | M1IP | 
 | NVA |  | 
+| STATIC_SPG9 | SPG-9 | 
 | STATIC_9K111 | 9K111 Launcher | 
 | URAL375D | Ural-375D Truck | 
 | BTR60PB | SPW-60B | 
@@ -58,9 +60,12 @@
 | T54A | T-54A | 
 | T55A | T-55A | 
 | T72M | T-72M | 
-| T72MGILLS | T-72M with (deployed) gills | 
-| T72A | T-72M1 | 
+| T72GILLS | T-72M with (deployed) gills | 
+| T72UV1 | T-72 ÜV1 | 
+| T72UV2 | T-72 ÜV2 | 
+| T72M1 | T-72M1 | 
 | SA |  | 
+| STATIC_SPG9_SA | Soviet Army SPG-9 |
 | STATIC_9K111_SA | Soviet Army 9K111 Launcher | 
 | URAL375D_SA | Soviet Army Ural-375D Truck | 
 | BTR60PB_SA | Soviet Army BTR-60PB | 
@@ -77,7 +82,8 @@
 | T3485 | T-34-85 | 
 | TC | Target Cheese | 
 
-![ATAC MelonPreferences](https://github.com/Cyances/Any-Tank-Any-Campaign/assets/154455050/2fdcdc5a-52b7-4c83-a851-7e61b9250818)
+![image](https://github.com/user-attachments/assets/d75f4d88-c7da-4e55-ae6f-8970fe6918ca)
+
 
 
 ## Note!
