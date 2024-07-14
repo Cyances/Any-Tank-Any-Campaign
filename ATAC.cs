@@ -184,176 +184,180 @@ namespace ATAC
             t80b_chance = cfg.CreateEntry("SA T-80B replacement chance", 100);
         }
 
+        
         [HarmonyPatch(typeof(GHPC.Mission.DynamicMissionComposer), "GetFirstRegisteredKeyForSpawnPoint")]
         public static class ReplaceUnits
         {
             private static void Postfix(GHPC.Mission.DynamicMissionComposer __instance, ref string __result)
             {
-                string replace = null;
-                int chance = 0;
-                bool failed = false;
-                switch (__result)
+                if (campaignMission.Value)
                 {
-                    // NATO
-                    case "STATIC_TOW":
-                        replace = tow_replace.Value;
-                        chance = tow_chance.Value;
-                        break;
-                    case "M923":
-                        replace = m923_replace.Value;
-                        chance = m923_chance.Value;
-                        break;
-                    case "M113":
-                        replace = m113_replace.Value;
-                        chance = m113_chance.Value;
-                        break;
-                    case "M2BRADLEY":
-                        replace = m2_replace.Value;
-                        chance = m2_chance.Value;
-                        break;
-                    case "M60A1RISEP":
-                        replace = m60a1_replace.Value;
-                        chance = m60a1_chance.Value;
-                        break;
-                    case "M60A3TTS":
-                        replace = m60a3_replace.Value;
-                        chance = m60a3_chance.Value;
-                        break;
-                    case "M1":
-                        replace = m1_replace.Value;
-                        chance = m1_chance.Value;
-                        break;
-                    case "M1IP":
-                        replace = m1ip_replace.Value;
-                        chance = m1ip_chance.Value;
-                        break;
-                    // NVA
-                    case "STATIC_SPG9":
-                        replace = spg9_replace.Value;
-                        chance = spg9_chance.Value;
-                        break;
-                    case "STATIC_9K111":
-                        replace = spigot_replace.Value;
-                        chance = spigot_chance.Value;
-                        break;
-                    case "URAL375D":
-                        replace = ural375d_replace.Value;
-                        chance = ural375d_chance.Value;
-                        break;
-                    case "BRDM2":
-                        replace = brdm2_replace.Value;
-                        chance = brdm2_chance.Value;
-                        break;
-                    case "BTR60PB":
-                        replace = btr60pb_replace.Value;
-                        chance = btr60pb_chance.Value;
-                        break;
-                    case "BMP1":
-                        replace = bmp1_replace.Value;
-                        chance = bmp1_chance.Value;
-                        break;
-                    case "BMP1P":
-                        replace = bmp1p_replace.Value;
-                        chance = bmp1p_chance.Value;
-                        break;
-                    case "BMP2":
-                        replace = bmp2_replace.Value;
-                        chance = bmp2_chance.Value;
-                        break;
-                    case "PT76":
-                        replace = pt76_replace.Value;
-                        chance = m923_chance.Value;
-                        break;
-                    case "T54A":
-                        replace = t54a_replace.Value;
-                        chance = t54a_chance.Value;
-                        break;
-                    case "T55A":
-                        replace = t55a_replace.Value;
-                        chance = t55a_chance.Value;
-                        break;
-                    case "T72M":
-                        replace = t72m_replace.Value;
-                        chance = t72m_chance.Value;
-                        break;
-                    case "T72GILLS":
-                        replace = t72mgills_replace.Value;
-                        chance = t72mgills_chance.Value;
-                        break;
-                    case "T72UV1":
-                        replace = t72uv1_replace.Value;
-                        chance = t72uv1_chance.Value;
-                        break;
-                    case "T72UV2":
-                        replace = t72uv2_replace.Value;
-                        chance = t72uv2_chance.Value;
-                        break;
-                    case "T72M1":
-                        replace = t72m1_replace.Value;
-                        chance = t72m1_chance.Value;
-                        break;
-                    // SA
-                    case "STATIC_SPG9_SA":
-                        replace = spg9_sa_replace.Value;
-                        chance = spg9_sa_chance.Value;
-                        break;
-                    case "STATIC_9K111_SA":
-                        replace = spigot_sa_replace.Value;
-                        chance = spigot_sa_chance.Value;
-                        break;
-                    case "URAL375D_SA":
-                        replace = ural375d_sa_replace.Value;
-                        chance = ural375d_sa_chance.Value;
-                        break;
-                    case "BRDM2_SA":
-                        replace = brdm2_sa_replace.Value;
-                        chance = brdm2_sa_chance.Value;
-                        break;
-                    case "BTR60PB_SA":
-                        replace = btr60pb_sa_replace.Value;
-                        chance = btr60pb_sa_chance.Value;
-                        break;
-                    case "BTR70":
-                        replace = btr70_replace.Value;
-                        chance = btr70_chance.Value;
-                        break;
-                    case "BMP1_SA":
-                        replace = bmp1_sa_replace.Value;
-                        chance = bmp1_sa_chance.Value;
-                        break;
-                    case "BMP1P_SA":
-                        replace = bmp1p_sa_replace.Value;
-                        chance = bmp1p_sa_chance.Value;
-                        break;
-                    case "BMP2_SA":
-                        replace = bmp2_sa_replace.Value;
-                        chance = bmp2_sa_chance.Value;
-                        break;
-                    case "T62":
-                        replace = t62_replace.Value;
-                        chance = t62_chance.Value;
-                        break;
-                    case "T64A":
-                        replace = t64a_replace.Value;
-                        chance = t64a_chance.Value;
-                        break;
-                    case "T64B":
-                        replace = t64b_replace.Value;
-                        chance = t64b_chance.Value;
-                        break;
-                    case "T80B":
-                        replace = t80b_replace.Value;
-                        chance = t80b_chance.Value;
-                        break;
-                    default:
-                        MelonLoader.MelonLogger.Warning("Found a vehicle without a case! Its ID is: " + __result + ". Ignoring.");
-                        failed = true;
-                        break;
-                }
-                if (UnityEngine.Random.Range(1, 100) <= chance && !failed)
-                {
-                    MelonLoader.MelonLogger.Msg("Transformed a " + __result + " into a " + replace + "!");
-                    __result = replace;
+                    string replace = null;
+                    int chance = 0;
+                    bool failed = false;
+                    switch (__result)
+                    {
+                        // NATO
+                        case "STATIC_TOW":
+                            replace = tow_replace.Value;
+                            chance = tow_chance.Value;
+                            break;
+                        case "M923":
+                            replace = m923_replace.Value;
+                            chance = m923_chance.Value;
+                            break;
+                        case "M113":
+                            replace = m113_replace.Value;
+                            chance = m113_chance.Value;
+                            break;
+                        case "M2BRADLEY":
+                            replace = m2_replace.Value;
+                            chance = m2_chance.Value;
+                            break;
+                        case "M60A1RISEP":
+                            replace = m60a1_replace.Value;
+                            chance = m60a1_chance.Value;
+                            break;
+                        case "M60A3TTS":
+                            replace = m60a3_replace.Value;
+                            chance = m60a3_chance.Value;
+                            break;
+                        case "M1":
+                            replace = m1_replace.Value;
+                            chance = m1_chance.Value;
+                            break;
+                        case "M1IP":
+                            replace = m1ip_replace.Value;
+                            chance = m1ip_chance.Value;
+                            break;
+                        // NVA
+                        case "STATIC_SPG9":
+                            replace = spg9_replace.Value;
+                            chance = spg9_chance.Value;
+                            break;
+                        case "STATIC_9K111":
+                            replace = spigot_replace.Value;
+                            chance = spigot_chance.Value;
+                            break;
+                        case "URAL375D":
+                            replace = ural375d_replace.Value;
+                            chance = ural375d_chance.Value;
+                            break;
+                        case "BRDM2":
+                            replace = brdm2_replace.Value;
+                            chance = brdm2_chance.Value;
+                            break;
+                        case "BTR60PB":
+                            replace = btr60pb_replace.Value;
+                            chance = btr60pb_chance.Value;
+                            break;
+                        case "BMP1":
+                            replace = bmp1_replace.Value;
+                            chance = bmp1_chance.Value;
+                            break;
+                        case "BMP1P":
+                            replace = bmp1p_replace.Value;
+                            chance = bmp1p_chance.Value;
+                            break;
+                        case "BMP2":
+                            replace = bmp2_replace.Value;
+                            chance = bmp2_chance.Value;
+                            break;
+                        case "PT76":
+                            replace = pt76_replace.Value;
+                            chance = m923_chance.Value;
+                            break;
+                        case "T54A":
+                            replace = t54a_replace.Value;
+                            chance = t54a_chance.Value;
+                            break;
+                        case "T55A":
+                            replace = t55a_replace.Value;
+                            chance = t55a_chance.Value;
+                            break;
+                        case "T72M":
+                            replace = t72m_replace.Value;
+                            chance = t72m_chance.Value;
+                            break;
+                        case "T72GILLS":
+                            replace = t72mgills_replace.Value;
+                            chance = t72mgills_chance.Value;
+                            break;
+                        case "T72UV1":
+                            replace = t72uv1_replace.Value;
+                            chance = t72uv1_chance.Value;
+                            break;
+                        case "T72UV2":
+                            replace = t72uv2_replace.Value;
+                            chance = t72uv2_chance.Value;
+                            break;
+                        case "T72M1":
+                            replace = t72m1_replace.Value;
+                            chance = t72m1_chance.Value;
+                            break;
+                        // SA
+                        case "STATIC_SPG9_SA":
+                            replace = spg9_sa_replace.Value;
+                            chance = spg9_sa_chance.Value;
+                            break;
+                        case "STATIC_9K111_SA":
+                            replace = spigot_sa_replace.Value;
+                            chance = spigot_sa_chance.Value;
+                            break;
+                        case "URAL375D_SA":
+                            replace = ural375d_sa_replace.Value;
+                            chance = ural375d_sa_chance.Value;
+                            break;
+                        case "BRDM2_SA":
+                            replace = brdm2_sa_replace.Value;
+                            chance = brdm2_sa_chance.Value;
+                            break;
+                        case "BTR60PB_SA":
+                            replace = btr60pb_sa_replace.Value;
+                            chance = btr60pb_sa_chance.Value;
+                            break;
+                        case "BTR70":
+                            replace = btr70_replace.Value;
+                            chance = btr70_chance.Value;
+                            break;
+                        case "BMP1_SA":
+                            replace = bmp1_sa_replace.Value;
+                            chance = bmp1_sa_chance.Value;
+                            break;
+                        case "BMP1P_SA":
+                            replace = bmp1p_sa_replace.Value;
+                            chance = bmp1p_sa_chance.Value;
+                            break;
+                        case "BMP2_SA":
+                            replace = bmp2_sa_replace.Value;
+                            chance = bmp2_sa_chance.Value;
+                            break;
+                        case "T62":
+                            replace = t62_replace.Value;
+                            chance = t62_chance.Value;
+                            break;
+                        case "T64A":
+                            replace = t64a_replace.Value;
+                            chance = t64a_chance.Value;
+                            break;
+                        case "T64B":
+                            replace = t64b_replace.Value;
+                            chance = t64b_chance.Value;
+                            break;
+                        case "T80B":
+                            replace = t80b_replace.Value;
+                            chance = t80b_chance.Value;
+                            break;
+                        default:
+                            MelonLoader.MelonLogger.Warning("Found a vehicle without a case! Its ID is: " + __result + ". Ignoring.");
+                            failed = true;
+                            break;
+                    }
+                    if (UnityEngine.Random.Range(1, 100) <= chance && !failed)
+                    {
+                        MelonLoader.MelonLogger.Msg("Transformed a " + __result + " into a " + replace + "!");
+                        __result = replace;
+                    }
                 }
             }
         }
