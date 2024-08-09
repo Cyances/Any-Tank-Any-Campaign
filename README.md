@@ -1,12 +1,11 @@
 ## ATAC v1.1.1 Branch Notes:
 <p>
 	<ul>
-	<li>Compatibility for GHPC Update 20240710^</li>
-	<li>Compatibility for GHPC Update 20240807^^</li>
-	<li>^Changed config unit name of T-72M with gills and T-72M1 </li>
-	<li>^Added replacement entries for SPG-9, T-72 ÜV1 and T-72 ÜV2</li>
-	<li>^^Added replacement entries for M60A1/AOS/RISE(P) '77, M60A3, T-72 Ural/LEM, T-64R and T-64A obr.1974/obr.1979/obr.1981/obr.1984</li>
-	<li>^Added a toggle (false by default) in config if playing campaign since the mod now affects Instant Action missions in some cases due to the updated unit spawning system</li>
+	<li>Compatibility for GHPC Update 20240710</li>
+	<li>Changed config unit name of T-72M with gills and T-72M1 </li>
+	<li>Added replacement entries for SPG-9, T-72 ÜV1 and T-72 ÜV2</li>
+	<li>Added replacement entries for M60A1/AOS/RISE(P) '77, M60A3, T-72 Ural/LEM, T-64R and T-64A obr.1974/obr.1979/obr.1981/obr.1984</li>
+	<li>Added a toggle (false by default) in config if playing campaign since the mod now affects Instant Action missions in some cases due to the updated unit spawning system</li>
 	<li>Highly suggest to rebuild the config (remove all the entries under ["ATAC Config"])</li>
 	</ul>
 </p>
