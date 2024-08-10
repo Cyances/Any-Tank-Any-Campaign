@@ -44,7 +44,11 @@
 | M923 | M923 Truck | 
 | M113 | M113 | 
 | M2BRADLEY | M2 Bradley | 
+| M60A1 | M60A1 | 
+| M60A1AOS | M60A1 AOS | 
+| M60A1RISEP77 | M60A1 RISE Passive '77 | 
 | M60A1RISEP | M60A1 RISE Passive | 
+| M60A3 | M60A3 | 
 | M60A3TTS | M60A3 TTS | 
 | M1 | M1 | 
 | M1IP | M1IP | 
@@ -59,11 +63,12 @@
 | PT76B | PT-76B | 
 | T54A | T-54A | 
 | T55A | T-55A | 
-| T72M | T-72M | 
-| T72GILLS | T-72M with (deployed) gills | 
+| T72 | T-72 (Ural) | 
+| T72ULEM | T-72 LEM | 
 | T72UV1 | T-72 ÜV1 | 
-| T72UV2 | T-72 ÜV2 | 
-| T72M1 | T-72M1 | 
+| T72GILLS | T-72M with (deployed) gills | 
+| T72UV2 | T-72 ÜV2 |
+| T72M1 | T-72M1 |  
 | SA |  | 
 | STATIC_SPG9_SA | Soviet Army SPG-9 |
 | STATIC_9K111_SA | Soviet Army 9K111 Launcher | 
@@ -74,7 +79,11 @@
 | BMP1P_SA | Soviet Army BMP-1P | 
 | BMP2_SA | Soviet Army BMP-2 | 
 | T62 | T-62 | 
-| T64A | T-64A | 
+| T64A74 | T-64A obr.1974 | 
+| T64A79 | T-64A obr.1979 | 
+| T64A81 | T-64A obr.1981 | 
+| T64A | T-64A (obr.1983) | 
+| T64A84 | T-64A obr.1984 | 
 | T64B | T-64B | 
 | T80B | T-80B | 
 | Bonus |  | 
