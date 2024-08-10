@@ -1,16 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MelonLoader;
 using HarmonyLib;
 using ATAC;
-using UnityEngine;
-using System.Reflection;
-using BehaviorDesigner.Runtime.Tasks.Unity.UnityString;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.0", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.1", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -30,8 +22,16 @@ namespace ATAC
         public static MelonPreferences_Entry<int> m2_chance;
         public static MelonPreferences_Entry<string> m60a1_replace;
         public static MelonPreferences_Entry<int> m60a1_chance;
+        public static MelonPreferences_Entry<string> m60a1aos_replace;
+        public static MelonPreferences_Entry<int> m60a1aos_chance;
+        public static MelonPreferences_Entry<string> m60a1risep77_replace;
+        public static MelonPreferences_Entry<int> m60a1risep77_chance;
+        public static MelonPreferences_Entry<string> m60a1risep_replace;
+        public static MelonPreferences_Entry<int> m60a1risep_chance;
         public static MelonPreferences_Entry<string> m60a3_replace;
         public static MelonPreferences_Entry<int> m60a3_chance;
+        public static MelonPreferences_Entry<string> m60a3tts_replace;
+        public static MelonPreferences_Entry<int> m60a3tts_chance;
         public static MelonPreferences_Entry<string> m1_replace;
         public static MelonPreferences_Entry<int> m1_chance;
         public static MelonPreferences_Entry<string> m1ip_replace;
@@ -59,12 +59,16 @@ namespace ATAC
         public static MelonPreferences_Entry<int> t54a_chance;
         public static MelonPreferences_Entry<string> t55a_replace;
         public static MelonPreferences_Entry<int> t55a_chance;
+        public static MelonPreferences_Entry<string> t72_replace;
+        public static MelonPreferences_Entry<int> t72_chance;
+        public static MelonPreferences_Entry<string> t72lem_replace;
+        public static MelonPreferences_Entry<int> t72lem_chance;
+        public static MelonPreferences_Entry<string> t72uv1_replace;
+        public static MelonPreferences_Entry<int> t72uv1_chance;
         public static MelonPreferences_Entry<string> t72m_replace;
         public static MelonPreferences_Entry<int> t72m_chance;
         public static MelonPreferences_Entry<string> t72mgills_replace;
         public static MelonPreferences_Entry<int> t72mgills_chance;
-        public static MelonPreferences_Entry<string> t72uv1_replace;
-        public static MelonPreferences_Entry<int> t72uv1_chance;
         public static MelonPreferences_Entry<string> t72uv2_replace;
         public static MelonPreferences_Entry<int> t72uv2_chance;
         public static MelonPreferences_Entry<string> t72m1_replace;
@@ -90,12 +94,23 @@ namespace ATAC
         public static MelonPreferences_Entry<int> bmp2_sa_chance;
         public static MelonPreferences_Entry<string> t62_replace;
         public static MelonPreferences_Entry<int> t62_chance;
-        public static MelonPreferences_Entry<string> t64a_replace;
+        public static MelonPreferences_Entry<string> t64r_replace;
+        public static MelonPreferences_Entry<int> t64r_chance;
+        public static MelonPreferences_Entry<string> t64a74_replace;
+        public static MelonPreferences_Entry<int> t64a74_chance;
+        public static MelonPreferences_Entry<string> t64a79_replace;
+        public static MelonPreferences_Entry<int> t64a79_chance;
+        public static MelonPreferences_Entry<string> t64a81_replace;
+        public static MelonPreferences_Entry<int> t64a81_chance;
+        public static MelonPreferences_Entry<string> t64a_replace;//obr. 1983
         public static MelonPreferences_Entry<int> t64a_chance;
+        public static MelonPreferences_Entry<string> t64a84_replace;
+        public static MelonPreferences_Entry<int> t64a84_chance;
         public static MelonPreferences_Entry<string> t64b_replace;
         public static MelonPreferences_Entry<int> t64b_chance;
         public static MelonPreferences_Entry<string> t80b_replace;
         public static MelonPreferences_Entry<int> t80b_chance;
+
         public override void OnInitializeMelon()
         {
             cfg = MelonPreferences.CreateCategory("ATAC Config");
@@ -110,10 +125,18 @@ namespace ATAC
             m113_chance = cfg.CreateEntry("M113 replacement chance", 100);
             m2_replace = cfg.CreateEntry("M2 replacement", "M2BRADLEY");
             m2_chance = cfg.CreateEntry("M2 replacement chance", 100);
-            m60a1_replace = cfg.CreateEntry("M60A1 replacement", "M60A1RISEP");
+            m60a1_replace = cfg.CreateEntry("M60A1 replacement", "M60A1");
             m60a1_chance = cfg.CreateEntry("M60A1 replacement chance", 100);
-            m60a3_replace = cfg.CreateEntry("M60A3 replacement", "M60A3TTS");
+            m60a1aos_replace = cfg.CreateEntry("M60A1 AOS replacement", "M60A1AOS");
+            m60a1aos_chance = cfg.CreateEntry("M60A1 AOS replacement chance", 100);
+            m60a1risep77_replace = cfg.CreateEntry("M60A1 RISE replacement", "M60A1RISEP77");
+            m60a1risep77_chance = cfg.CreateEntry("M60A1 RISE replacement chance", 100);
+            m60a1risep_replace = cfg.CreateEntry("M60A1 RISE(P) replacement", "M60A1RISEP");
+            m60a1risep_chance = cfg.CreateEntry("M60A1 RISE(P) replacement chance", 100);
+            m60a3_replace = cfg.CreateEntry("M60A3 replacement", "M60A3");
             m60a3_chance = cfg.CreateEntry("M60A3 replacement chance", 100);
+            m60a3tts_replace = cfg.CreateEntry("M60A3 TTS replacement", "M60A3TTS");
+            m60a3tts_chance = cfg.CreateEntry("M60A3 TTS replacement chance", 100);
             m1_replace = cfg.CreateEntry("M1 replacement", "M1");
             m1_chance = cfg.CreateEntry("M1 replacement chance", 100);
             m1ip_replace = cfg.CreateEntry("M1IP replacement", "M1IP");
@@ -144,12 +167,16 @@ namespace ATAC
             t54a_chance = cfg.CreateEntry("T-54A replacement chance", 100);
             t55a_replace = cfg.CreateEntry("T-55A replacement", "T72GILLS");
             t55a_chance = cfg.CreateEntry("T-55A replacement chance", 100);
+            t72_replace = cfg.CreateEntry("T-72 replacement", "T72");
+            t72_chance = cfg.CreateEntry("T-72 replacement chance", 100);
+            t72lem_replace = cfg.CreateEntry("T-72 LEM replacement", "T72ULEM");
+            t72lem_chance = cfg.CreateEntry("T-72 LEM replacement chance", 100);
+            t72uv1_replace = cfg.CreateEntry("T-72 UV1 replacement", "T72UV1");
+            t72uv1_chance = cfg.CreateEntry("T-72 UV1 replacement chance", 100);
             t72m_replace = cfg.CreateEntry("T-72M replacement", "T72M1");
             t72m_chance = cfg.CreateEntry("T-72M replacement chance", 100);
             t72mgills_replace = cfg.CreateEntry("T-72M Gills replacement", "T72M1");
             t72mgills_chance = cfg.CreateEntry("T-72M Gills replacement chance", 100);
-            t72uv1_replace = cfg.CreateEntry("T-72 UV1 replacement", "T72UV1");
-            t72uv1_chance = cfg.CreateEntry("T-72 UV1 replacement chance", 100);
             t72uv2_replace = cfg.CreateEntry("T-72 UV2 replacement", "T72UV2");
             t72uv2_chance = cfg.CreateEntry("T-72 UV2 replacement chance", 100);
             t72m1_replace = cfg.CreateEntry("T-72M1 replacement", "T72M1");
@@ -176,15 +203,25 @@ namespace ATAC
             bmp2_sa_chance = cfg.CreateEntry("SA BMP-2 replacement chance", 100);
             t62_replace = cfg.CreateEntry("SA T-62 replacement", "T62");
             t62_chance = cfg.CreateEntry("SA T-62 replacement chance", 100);
+            t64r_replace = cfg.CreateEntry("SA T-64R replacement", "T64R");
+            t64r_chance = cfg.CreateEntry("SA T-64R replacement chance", 100);
+            t64a74_replace = cfg.CreateEntry("SA T-64A obr74 replacement", "T64A74");
+            t64a74_chance = cfg.CreateEntry("SA T-64A obr74 replacement chance", 100);
+            t64a79_replace = cfg.CreateEntry("SA T-64A obr79 replacement", "T64A79");
+            t64a79_chance = cfg.CreateEntry("SA T-64A obr79 replacement chance", 100);
+            t64a81_replace = cfg.CreateEntry("SA T-64A obr81 replacement", "T64A81");
+            t64a81_chance = cfg.CreateEntry("SA T-64A obr81 replacement chance", 100);
             t64a_replace = cfg.CreateEntry("SA T-64A replacement", "T64B");
-            t64a_chance = cfg.CreateEntry("SA T-64B replacement chance", 100);
+            t64a_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
+            t64a84_replace = cfg.CreateEntry("SA T-64A obr84 replacement", "T64A84");
+            t64a84_chance = cfg.CreateEntry("SA T-64A obr84 replacement chance", 100);
             t64b_replace = cfg.CreateEntry("SA T-64B replacement", "T64B");
-            t64b_chance = cfg.CreateEntry("SA T-64A replacement chance", 100);
+            t64b_chance = cfg.CreateEntry("SA T-64B replacement chance", 100);
             t80b_replace = cfg.CreateEntry("SA T-80B replacement", "T80B");
             t80b_chance = cfg.CreateEntry("SA T-80B replacement chance", 100);
         }
 
-        
+
         [HarmonyPatch(typeof(GHPC.Mission.DynamicMissionComposer), "GetFirstRegisteredKeyForSpawnPoint")]
         public static class ReplaceUnits
         {
@@ -214,13 +251,29 @@ namespace ATAC
                             replace = m2_replace.Value;
                             chance = m2_chance.Value;
                             break;
-                        case "M60A1RISEP":
+                        case "M60A1":
                             replace = m60a1_replace.Value;
                             chance = m60a1_chance.Value;
                             break;
-                        case "M60A3TTS":
+                        case "M60A1AOS":
+                            replace = m60a1aos_replace.Value;
+                            chance = m60a1aos_chance.Value;
+                            break;
+                        case "M60A1RISEP77":
+                            replace = m60a1risep77_replace.Value;
+                            chance = m60a1risep77_chance.Value;
+                            break;
+                        case "M60A1RISEP":
+                            replace = m60a1risep_replace.Value;
+                            chance = m60a1risep_chance.Value;
+                            break;
+                        case "M60A3":
                             replace = m60a3_replace.Value;
                             chance = m60a3_chance.Value;
+                            break;
+                        case "M60A3TTS":
+                            replace = m60a3tts_replace.Value;
+                            chance = m60a3tts_chance.Value;
                             break;
                         case "M1":
                             replace = m1_replace.Value;
@@ -265,7 +318,7 @@ namespace ATAC
                             break;
                         case "PT76":
                             replace = pt76_replace.Value;
-                            chance = m923_chance.Value;
+                            chance = pt76_chance.Value;
                             break;
                         case "T54A":
                             replace = t54a_replace.Value;
@@ -275,6 +328,18 @@ namespace ATAC
                             replace = t55a_replace.Value;
                             chance = t55a_chance.Value;
                             break;
+                        case "T72":
+                            replace = t72_replace.Value;
+                            chance = t72_chance.Value;
+                            break;
+                        case "T72ULEM":
+                            replace = t72lem_replace.Value;
+                            chance = t72lem_chance.Value;
+                            break;
+                        case "T72UV1":
+                            replace = t72uv1_replace.Value;
+                            chance = t72uv1_chance.Value;
+                            break;
                         case "T72M":
                             replace = t72m_replace.Value;
                             chance = t72m_chance.Value;
@@ -282,10 +347,6 @@ namespace ATAC
                         case "T72GILLS":
                             replace = t72mgills_replace.Value;
                             chance = t72mgills_chance.Value;
-                            break;
-                        case "T72UV1":
-                            replace = t72uv1_replace.Value;
-                            chance = t72uv1_chance.Value;
                             break;
                         case "T72UV2":
                             replace = t72uv2_replace.Value;
@@ -336,9 +397,29 @@ namespace ATAC
                             replace = t62_replace.Value;
                             chance = t62_chance.Value;
                             break;
+                        case "T64R":
+                            replace = t64r_replace.Value;
+                            chance = t64r_chance.Value;
+                            break;
+                        case "T64A74":
+                            replace = t64a74_replace.Value;
+                            chance = t64a74_chance.Value;
+                            break;
+                        case "T64A79":
+                            replace = t64a79_replace.Value;
+                            chance = t64a79_chance.Value;
+                            break;
+                        case "T64A81":
+                            replace = t64a81_replace.Value;
+                            chance = t64a81_chance.Value;
+                            break;
                         case "T64A":
                             replace = t64a_replace.Value;
                             chance = t64a_chance.Value;
+                            break;
+                        case "T64A84":
+                            replace = t64a84_replace.Value;
+                            chance = t64a84_chance.Value;
                             break;
                         case "T64B":
                             replace = t64b_replace.Value;
