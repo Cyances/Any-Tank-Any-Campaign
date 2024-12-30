@@ -14,7 +14,7 @@
 | Config Unit Name  | Unit Name |
 | ------------- | ------------- |
 | NATO |  | 
-| M151 | M151 Truck | 
+| M151 | M151 Jeep | 
 | M151M232 | M151 TOW | 
 | M60A1 | M60A1 | 
 | M60A1AOS | M60A1 AOS | 
