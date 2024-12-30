@@ -2,7 +2,7 @@ using MelonLoader;
 using HarmonyLib;
 using ATAC;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.1", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.2", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -14,6 +14,10 @@ namespace ATAC
 
         public static MelonPreferences_Entry<string> tow_replace;
         public static MelonPreferences_Entry<int> tow_chance;
+        public static MelonPreferences_Entry<string> m151_replace;
+        public static MelonPreferences_Entry<int> m151_chance;
+        public static MelonPreferences_Entry<string> m151tow_replace;
+        public static MelonPreferences_Entry<int> m151tow_chance;
         public static MelonPreferences_Entry<string> m923_replace;
         public static MelonPreferences_Entry<int> m923_chance;
         public static MelonPreferences_Entry<string> m113_replace;
@@ -119,6 +123,10 @@ namespace ATAC
             tow_replace = cfg.CreateEntry("TOW Launcher replacement", "STATIC_TOW");
             tow_replace.Description = "////NATO////";
             tow_chance = cfg.CreateEntry("TOW Launcher replacement chance", 100);
+            m151_replace = cfg.CreateEntry("M151 replacement", "M151");
+            m151_chance = cfg.CreateEntry("M151 replacement chance", 100);
+            m151tow_replace = cfg.CreateEntry("M151 TOW replacement", "M151M232");
+            m151tow_chance = cfg.CreateEntry("M151 TOW replacement chance", 100);
             m923_replace = cfg.CreateEntry("M923 replacement", "M923");
             m923_chance = cfg.CreateEntry("M923 replacement chance", 100);
             m113_replace = cfg.CreateEntry("M113 replacement", "M2BRADLEY");
@@ -238,6 +246,14 @@ namespace ATAC
                         case "STATIC_TOW":
                             replace = tow_replace.Value;
                             chance = tow_chance.Value;
+                            break;
+                        case "M151":
+                            replace = m151_replace.Value;
+                            chance = m151_chance.Value;
+                            break;
+                        case "M151M232":
+                            replace = m151tow_replace.Value;
+                            chance = m151tow_chance.Value;
                             break;
                         case "M923":
                             replace = m923_replace.Value;
