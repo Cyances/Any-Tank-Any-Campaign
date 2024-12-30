@@ -1,11 +1,12 @@
-## ATAC v1.1.1 Branch Notes:
+## ATAC v1.1.2 Branch Notes:
 <p>
 	<ul>
-	<li>Compatibility for GHPC Update 20240710</li>
-	<li>Changed config unit name of T-72M with gills and T-72M1 </li>
-	<li>Added replacement entries for SPG-9, T-72 ÜV1 and T-72 ÜV2</li>
-	<li>Added replacement entries for M60A1/AOS/RISE(P) '77, M60A3, T-72 Ural/LEM, T-64R and T-64A obr.1974/obr.1979/obr.1981/obr.1984</li>
-	<li>Added a toggle (false by default) in config if playing campaign since the mod now affects Instant Action missions in some cases due to the updated unit spawning system</li>
+	<li>Compatibility for GHPC Update 20240710+</li>
+	<li>2024-07-15: Changed config unit name of T-72M with gills and T-72M1 </li>
+	<li>2024-07-15: Added replacement entries for SPG-9, T-72 ÜV1 and T-72 ÜV2</li>
+	<li>2024-07-15: Added a toggle (false by default) in config if playing campaign since the mod now affects Instant Action missions in some cases due to the updated unit spawning system</li>
+	<li>2024-08-10: Added replacement entries for M60A1/AOS/RISE(P) '77, M60A3, T-72 Ural/LEM, T-64R and T-64A obr.1974/obr.1979/obr.1981/obr.1984</li>
+	<li>2024-12-31: Added replacement entries for M151 and M151 TOW</li>
 	<li>Highly suggest to rebuild the config (remove all the entries under ["ATAC Config"])</li>
 	</ul>
 </p>
@@ -13,6 +14,8 @@
 | Config Unit Name  | Unit Name |
 | ------------- | ------------- |
 | NATO |  | 
+| M151 | M151 Truck | 
+| M151M232 | M151 TOW | 
 | M60A1 | M60A1 | 
 | M60A1AOS | M60A1 AOS | 
 | M60A1RISEP77 | M60A1 RISE(P) '77 | 
@@ -36,6 +39,6 @@
 ## Notes:
 <p>
 	<ul>
-	<li>There Config Unit Name for the pre-20240806 Update M60A1 RISE(P) and T-64A have not changed</li>
+	<li>The Config Unit Name for the pre-20240806 Update M60A1 RISE(P) and T-64A have not changed</li>
 	</ul>
 </p>
