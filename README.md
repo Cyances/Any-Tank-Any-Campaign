@@ -41,7 +41,7 @@
 | ------------- | ------------- |
 | NATO |  | 
 | STATIC_TOW | TOW Launcher | 
-| M151 | M151 Truck | 
+| M151 | M151 Jeep | 
 | M151M232 | M151 TOW | 
 | M923 | M923 Truck | 
 | M113 | M113 | 
