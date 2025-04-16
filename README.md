@@ -6,7 +6,7 @@
 - 2024-07-15: Added a toggle (false by default) in config if playing campaign since the mod now affects Instant Action missions in some cases due to the updated unit spawning system
 - 2024-08-10: Added replacement entries for M60A1/AOS/RISE(P) '77, M60A3, T-72 Ural/LEM, T-64R and T-64A obr.1974/obr.1979/obr.1981/obr.1984
 - 2024-12-31: Added replacement entries for M151 and M151 TOW
-- 2025-04-16: Added replacement entries for M2 Bradley(alt variant), M113G, Leopard 1A1/1A1A2/1A1A3/1A1A4, UAZ-469, UAZ-469 SPG-9
+- 2025-04-16: Added replacement entries for M2 Bradley(alt variant), M113G, Leopard 1A1/1A1A2/1A1A3/1A1A4 and UAZ-469
 - 2025-04-16: Fixed PT-76B not being detected and replaced
 - Highly suggest to rebuild the config (remove all the entries under ["ATAC Config"])
 
@@ -41,8 +41,6 @@
 | T64A79 | T-64A obr.1979 | 
 | T64A81 | T-64A obr.1981 | 
 | T64A84 | T-64A obr.1984 | 
-| BONUS |  | 
-| UAZ469 SPG9 | UAZ-469 SPG9 | 
 
 ## Notes:
 <p>
