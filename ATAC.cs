@@ -2,7 +2,7 @@ using MelonLoader;
 using HarmonyLib;
 using ATAC;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.2", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.3", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -24,6 +24,8 @@ namespace ATAC
         public static MelonPreferences_Entry<int> m113_chance;
         public static MelonPreferences_Entry<string> m2_replace;
         public static MelonPreferences_Entry<int> m2_chance;
+        public static MelonPreferences_Entry<string> m2alt_replace;
+        public static MelonPreferences_Entry<int> m2alt_chance;
         public static MelonPreferences_Entry<string> m60a1_replace;
         public static MelonPreferences_Entry<int> m60a1_chance;
         public static MelonPreferences_Entry<string> m60a1aos_replace;
@@ -41,10 +43,26 @@ namespace ATAC
         public static MelonPreferences_Entry<string> m1ip_replace;
         public static MelonPreferences_Entry<int> m1ip_chance;
 
+        public static MelonPreferences_Entry<string> m113g_replace;
+        public static MelonPreferences_Entry<int> m113g_chance;
+        public static MelonPreferences_Entry<string> leo1a1_replace;
+        public static MelonPreferences_Entry<int> leo1a1_chance;
+        public static MelonPreferences_Entry<string> leo1a1a2_replace;
+        public static MelonPreferences_Entry<int> leo1a1a2_chance;
+        public static MelonPreferences_Entry<string> leo1a1a3_replace;
+        public static MelonPreferences_Entry<int> leo1a1a3_chance;
+        public static MelonPreferences_Entry<string> leo1a1a4_replace;
+        public static MelonPreferences_Entry<int> leo1a1a4_chance;
+
+
         public static MelonPreferences_Entry<string> spg9_replace;
         public static MelonPreferences_Entry<int> spg9_chance;
         public static MelonPreferences_Entry<string> spigot_replace;
         public static MelonPreferences_Entry<int> spigot_chance;
+        public static MelonPreferences_Entry<string> uaz469_replace;
+        public static MelonPreferences_Entry<int> uaz469_chance;
+        public static MelonPreferences_Entry<string> uaz469spg9_replace;
+        public static MelonPreferences_Entry<int> uaz469spg9_chance;
         public static MelonPreferences_Entry<string> ural375d_replace;
         public static MelonPreferences_Entry<int> ural375d_chance;
         public static MelonPreferences_Entry<string> brdm2_replace;
@@ -120,8 +138,9 @@ namespace ATAC
             cfg = MelonPreferences.CreateCategory("ATAC Config");
             campaignMission = cfg.CreateEntry("Playing Campaign", false);
             campaignMission.Description = "Set to true if you are playing Campaign, false if Instant Action";
+
             tow_replace = cfg.CreateEntry("TOW Launcher replacement", "STATIC_TOW");
-            tow_replace.Description = "////NATO////";
+            tow_replace.Description = "////USA////";
             tow_chance = cfg.CreateEntry("TOW Launcher replacement chance", 100);
             m151_replace = cfg.CreateEntry("M151 replacement", "M151");
             m151_chance = cfg.CreateEntry("M151 replacement chance", 100);
@@ -133,6 +152,8 @@ namespace ATAC
             m113_chance = cfg.CreateEntry("M113 replacement chance", 100);
             m2_replace = cfg.CreateEntry("M2 replacement", "M2BRADLEY");
             m2_chance = cfg.CreateEntry("M2 replacement chance", 100);
+            m2alt_replace = cfg.CreateEntry("M2 (Alt) replacement", "M2BRADLEY(ALT)");
+            m2alt_chance = cfg.CreateEntry("M2 (Alt) replacement chance", 100);
             m60a1_replace = cfg.CreateEntry("M60A1 replacement", "M60A1");
             m60a1_chance = cfg.CreateEntry("M60A1 replacement chance", 100);
             m60a1aos_replace = cfg.CreateEntry("M60A1 AOS replacement", "M60A1AOS");
@@ -150,13 +171,30 @@ namespace ATAC
             m1ip_replace = cfg.CreateEntry("M1IP replacement", "M1IP");
             m1ip_chance = cfg.CreateEntry("M1IP replacement chance", 100);
 
+            m113g_replace = cfg.CreateEntry("M113G replacement", "M113G");
+            m113g_replace.Description = "////FRG////";
+            m113g_chance = cfg.CreateEntry("M113G replacement chance", 100);
+
+            leo1a1_replace = cfg.CreateEntry("Leopard 1A1 replacement", "LEO1A1");
+            leo1a1_chance = cfg.CreateEntry("Leopard 1A1 replacement chance", 100);
+            leo1a1a2_replace = cfg.CreateEntry("Leopard 1A1A2 replacement", "LEO1A1A2");
+            leo1a1a2_chance = cfg.CreateEntry("Leopard 1A1A2 replacement chance", 100);
+            leo1a1a3_replace = cfg.CreateEntry("Leopard 1A1A3 replacement", "LEO1A1A3");
+            leo1a1a3_chance = cfg.CreateEntry("Leopard 1A1A3 replacement chance", 100);
+            leo1a1a4_replace = cfg.CreateEntry("Leopard 1A1A4 replacement", "LEO1A1A4");
+            leo1a1a4_chance = cfg.CreateEntry("Leopard 1A1A4 replacement chance", 100);
+
 
             spg9_replace = cfg.CreateEntry("SPG-9 replacement", "STATIC_SPG9");
-            spg9_replace.Description = "////NVA////";
+            spg9_replace.Description = "////GDR////";
             spg9_chance = cfg.CreateEntry("SPG-9 replacement chance", 100);
 
             spigot_replace = cfg.CreateEntry("9K111 Launcher replacement", "STATIC_9K111");
             spigot_chance = cfg.CreateEntry("9K111 Launcher replacement chance", 100);
+            uaz469_replace = cfg.CreateEntry("UAZ-469 replacement", "UAZ469");
+            uaz469_chance = cfg.CreateEntry("UAZ-469 replacement chance", 100);
+            uaz469spg9_replace = cfg.CreateEntry("UAZ-469 SPG-9 replacement", "UAZ469 SPG9");
+            uaz469spg9_chance = cfg.CreateEntry("UAZ-469 SPG-9 replacement chance", 100);
             ural375d_replace = cfg.CreateEntry("Ural-375D replacement", "URAL375D");
             ural375d_chance = cfg.CreateEntry("Ural-375D replacement chance", 100);
             brdm2_replace = cfg.CreateEntry("BRDM2 replacement", "BRDM2");
@@ -191,7 +229,7 @@ namespace ATAC
             t72m1_chance = cfg.CreateEntry("T-72M1 replacement chance", 100);
 
             spg9_sa_replace = cfg.CreateEntry("SA SPG-9 replacement", "STATIC_SPG9_SA");
-            spg9_sa_replace.Description = "////SA////";
+            spg9_sa_replace.Description = "////USSR////";
             spg9_sa_chance = cfg.CreateEntry("SA SPG-9 replacement chance", 100);
             spigot_sa_replace = cfg.CreateEntry("SA 9K111 Launcher replacement", "STATIC_9K111_SA");
             spigot_sa_chance = cfg.CreateEntry("SA 9K111 Launcher replacement chance", 100);
@@ -242,7 +280,7 @@ namespace ATAC
                     bool failed = false;
                     switch (__result)
                     {
-                        // NATO
+                        // USA
                         case "STATIC_TOW":
                             replace = tow_replace.Value;
                             chance = tow_chance.Value;
@@ -266,6 +304,10 @@ namespace ATAC
                         case "M2BRADLEY":
                             replace = m2_replace.Value;
                             chance = m2_chance.Value;
+                            break;
+                        case "M2BRADLEY(ALT)":
+                            replace = m2alt_replace.Value;
+                            chance = m2alt_chance.Value;
                             break;
                         case "M60A1":
                             replace = m60a1_replace.Value;
@@ -299,7 +341,28 @@ namespace ATAC
                             replace = m1ip_replace.Value;
                             chance = m1ip_chance.Value;
                             break;
-                        // NVA
+                        // FRG
+                        case "M113G":
+                            replace = m113g_replace.Value;
+                            chance = m113g_chance.Value;
+                            break;
+                        case "LEO1A1":
+                            replace = leo1a1_replace.Value;
+                            chance = leo1a1_chance.Value;
+                            break;
+                        case "LEO1A1A2":
+                            replace = leo1a1a2_replace.Value;
+                            chance = leo1a1a2_chance.Value;
+                            break;
+                        case "LEO1A1A3":
+                            replace = leo1a1a3_replace.Value;
+                            chance = leo1a1a3_chance.Value;
+                            break;
+                        case "LEO1A1A4":
+                            replace = leo1a1a4_replace.Value;
+                            chance = leo1a1a4_chance.Value;
+                            break;
+                        // GDR
                         case "STATIC_SPG9":
                             replace = spg9_replace.Value;
                             chance = spg9_chance.Value;
@@ -307,6 +370,14 @@ namespace ATAC
                         case "STATIC_9K111":
                             replace = spigot_replace.Value;
                             chance = spigot_chance.Value;
+                            break;
+                        case "UAZ469":
+                            replace = uaz469_replace.Value;
+                            chance = uaz469_chance.Value;
+                            break;
+                        case "UAZ469 SPG-9":
+                            replace = uaz469spg9_replace.Value;
+                            chance = uaz469spg9_chance.Value;
                             break;
                         case "URAL375D":
                             replace = ural375d_replace.Value;
@@ -332,7 +403,7 @@ namespace ATAC
                             replace = bmp2_replace.Value;
                             chance = bmp2_chance.Value;
                             break;
-                        case "PT76":
+                        case "PT76B":
                             replace = pt76_replace.Value;
                             chance = pt76_chance.Value;
                             break;
@@ -372,7 +443,7 @@ namespace ATAC
                             replace = t72m1_replace.Value;
                             chance = t72m1_chance.Value;
                             break;
-                        // SA
+                        // USSR
                         case "STATIC_SPG9_SA":
                             replace = spg9_sa_replace.Value;
                             chance = spg9_sa_chance.Value;
