@@ -1,4 +1,4 @@
-## ATAC v1.1.2:
+## ATAC v1.1.3:
 <p>
 	<ul>
 	<li>Choose what vehicle should appear in campaign.</li>
@@ -39,7 +39,7 @@
 
 | Config Unit Name  | Unit Name |
 | ------------- | ------------- |
-| NATO |  | 
+| USA |  | 
 | STATIC_TOW | TOW Launcher | 
 | M151 | M151 Jeep | 
 | M151M232 | M151 TOW | 
@@ -54,7 +54,13 @@
 | M60A3TTS | M60A3 TTS | 
 | M1 | M1 | 
 | M1IP | M1IP | 
-| NVA |  | 
+| FRG |  | 
+| M113G | N113G | 
+| LEO1A1 | Leopard 1A1 | 
+| LEO1A1A3 | Leopard 1A1A2 | 
+| LEO1A1A3 | Leopard 1A1A3 | 
+| LEO1A1A4 | Leopard 1A1A4 | 
+| GDR |  | 
 | STATIC_SPG9 | SPG-9 | 
 | STATIC_9K111 | 9K111 Launcher | 
 | URAL375D | Ural-375D Truck | 
@@ -71,7 +77,7 @@
 | T72GILLS | T-72M with (deployed) gills | 
 | T72UV2 | T-72 ÜV2 |
 | T72M1 | T-72M1 |  
-| SA |  | 
+| USSR |  | 
 | STATIC_SPG9_SA | Soviet Army SPG-9 |
 | STATIC_9K111_SA | Soviet Army 9K111 Launcher | 
 | URAL375D_SA | Soviet Army Ural-375D Truck | 
@@ -90,6 +96,7 @@
 | T80B | T-80B | 
 | Bonus |  | 
 | UAZ469 | UAZ-469 | 
+| UAZ469 SPG9 | UAZ-469 SPG9 | 
 | T3485 | T-34-85 | 
 | TC | Target Cheese | 
 
