@@ -61,8 +61,6 @@ namespace ATAC
         public static MelonPreferences_Entry<int> spigot_chance;
         public static MelonPreferences_Entry<string> uaz469_replace;
         public static MelonPreferences_Entry<int> uaz469_chance;
-        public static MelonPreferences_Entry<string> uaz469spg9_replace;
-        public static MelonPreferences_Entry<int> uaz469spg9_chance;
         public static MelonPreferences_Entry<string> ural375d_replace;
         public static MelonPreferences_Entry<int> ural375d_chance;
         public static MelonPreferences_Entry<string> brdm2_replace;
@@ -193,8 +191,6 @@ namespace ATAC
             spigot_chance = cfg.CreateEntry("9K111 Launcher replacement chance", 100);
             uaz469_replace = cfg.CreateEntry("UAZ-469 replacement", "UAZ469");
             uaz469_chance = cfg.CreateEntry("UAZ-469 replacement chance", 100);
-            uaz469spg9_replace = cfg.CreateEntry("UAZ-469 SPG-9 replacement", "UAZ469 SPG9");
-            uaz469spg9_chance = cfg.CreateEntry("UAZ-469 SPG-9 replacement chance", 100);
             ural375d_replace = cfg.CreateEntry("Ural-375D replacement", "URAL375D");
             ural375d_chance = cfg.CreateEntry("Ural-375D replacement chance", 100);
             brdm2_replace = cfg.CreateEntry("BRDM2 replacement", "BRDM2");
@@ -374,10 +370,6 @@ namespace ATAC
                         case "UAZ469":
                             replace = uaz469_replace.Value;
                             chance = uaz469_chance.Value;
-                            break;
-                        case "UAZ469 SPG-9":
-                            replace = uaz469spg9_replace.Value;
-                            chance = uaz469spg9_chance.Value;
                             break;
                         case "URAL375D":
                             replace = ural375d_replace.Value;
