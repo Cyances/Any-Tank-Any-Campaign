@@ -2,7 +2,7 @@ using MelonLoader;
 using HarmonyLib;
 using ATAC;
 
-[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.3", "Cyance and Fractal")]
+[assembly: MelonInfo(typeof(ATACMod), "Any Tank Any Campaign", "1.1.4", "Cyance and Fractal")]
 [assembly: MelonGame("Radian Simulations LLC", "GHPC")]
 
 namespace ATAC
@@ -45,6 +45,12 @@ namespace ATAC
 
         public static MelonPreferences_Entry<string> m113g_replace;
         public static MelonPreferences_Entry<int> m113g_chance;
+        public static MelonPreferences_Entry<string> mardera1_replace;
+        public static MelonPreferences_Entry<int> mardera1_chance;
+        public static MelonPreferences_Entry<string> mardera1noatgm_replace;
+        public static MelonPreferences_Entry<int> mardera1noatgm_chance;
+        public static MelonPreferences_Entry<string> mardera1plus_replace;
+        public static MelonPreferences_Entry<int> mardera1plus_chance;
         public static MelonPreferences_Entry<string> leo1a1_replace;
         public static MelonPreferences_Entry<int> leo1a1_chance;
         public static MelonPreferences_Entry<string> leo1a1a2_replace;
@@ -53,7 +59,6 @@ namespace ATAC
         public static MelonPreferences_Entry<int> leo1a1a3_chance;
         public static MelonPreferences_Entry<string> leo1a1a4_replace;
         public static MelonPreferences_Entry<int> leo1a1a4_chance;
-
 
         public static MelonPreferences_Entry<string> spg9_replace;
         public static MelonPreferences_Entry<int> spg9_chance;
@@ -140,6 +145,7 @@ namespace ATAC
             tow_replace = cfg.CreateEntry("TOW Launcher replacement", "STATIC_TOW");
             tow_replace.Description = "////USA////";
             tow_chance = cfg.CreateEntry("TOW Launcher replacement chance", 100);
+
             m151_replace = cfg.CreateEntry("M151 replacement", "M151");
             m151_chance = cfg.CreateEntry("M151 replacement chance", 100);
             m151tow_replace = cfg.CreateEntry("M151 TOW replacement", "M151M232");
@@ -173,6 +179,12 @@ namespace ATAC
             m113g_replace.Description = "////FRG////";
             m113g_chance = cfg.CreateEntry("M113G replacement chance", 100);
 
+            mardera1_replace = cfg.CreateEntry("Marder A1 replacement", "MARDERA1");
+            mardera1_chance = cfg.CreateEntry("Marder A1 replacement chance", 100);
+            mardera1noatgm_replace = cfg.CreateEntry("Marder A1 (No ATGM) replacement", "MARDERA1_NO_ATGM");
+            mardera1noatgm_chance = cfg.CreateEntry("Marder A1 (No ATGM) replacement chance", 100);
+            mardera1plus_replace = cfg.CreateEntry("Marder A1+ replacement", "MARDERA1PLUS");
+            mardera1plus_chance = cfg.CreateEntry("Marder A1+ replacement chance", 100);
             leo1a1_replace = cfg.CreateEntry("Leopard 1A1 replacement", "LEO1A1");
             leo1a1_chance = cfg.CreateEntry("Leopard 1A1 replacement chance", 100);
             leo1a1a2_replace = cfg.CreateEntry("Leopard 1A1A2 replacement", "LEO1A1A2");
@@ -181,7 +193,6 @@ namespace ATAC
             leo1a1a3_chance = cfg.CreateEntry("Leopard 1A1A3 replacement chance", 100);
             leo1a1a4_replace = cfg.CreateEntry("Leopard 1A1A4 replacement", "LEO1A1A4");
             leo1a1a4_chance = cfg.CreateEntry("Leopard 1A1A4 replacement chance", 100);
-
 
             spg9_replace = cfg.CreateEntry("SPG-9 replacement", "STATIC_SPG9");
             spg9_replace.Description = "////GDR////";
@@ -227,6 +238,7 @@ namespace ATAC
             spg9_sa_replace = cfg.CreateEntry("SA SPG-9 replacement", "STATIC_SPG9_SA");
             spg9_sa_replace.Description = "////USSR////";
             spg9_sa_chance = cfg.CreateEntry("SA SPG-9 replacement chance", 100);
+
             spigot_sa_replace = cfg.CreateEntry("SA 9K111 Launcher replacement", "STATIC_9K111_SA");
             spigot_sa_chance = cfg.CreateEntry("SA 9K111 Launcher replacement chance", 100);
             ural375d_sa_replace = cfg.CreateEntry("SA Ural-375D", "URAL375D_SA");
@@ -267,10 +279,14 @@ namespace ATAC
         [HarmonyPatch(typeof(GHPC.Mission.DynamicMissionComposer), "GetFirstRegisteredKeyForSpawnPoint")]
         public static class ReplaceUnits
         {
+
             private static void Postfix(GHPC.Mission.DynamicMissionComposer __instance, ref string __result)
             {
                 if (campaignMission.Value)
                 {
+                    //Add a check in the future to check if the config is enabled for replacing campaign units
+                    //MelonLoader.MelonLogger.Msg("Enabled for replacement of campaign units");
+
                     string replace = null;
                     int chance = 0;
                     bool failed = false;
@@ -341,6 +357,18 @@ namespace ATAC
                         case "M113G":
                             replace = m113g_replace.Value;
                             chance = m113g_chance.Value;
+                            break;
+                        case "MARDERA1":
+                            replace = mardera1_replace.Value;
+                            chance = mardera1_chance.Value;
+                            break;
+                        case "MARDERA1_NO_ATGM":
+                            replace = mardera1noatgm_replace.Value;
+                            chance = mardera1noatgm_chance.Value;
+                            break;
+                        case "MARDERA1PLUS":
+                            replace = mardera1plus_replace.Value;
+                            chance = mardera1plus_chance.Value;
                             break;
                         case "LEO1A1":
                             replace = leo1a1_replace.Value;
@@ -520,6 +548,8 @@ namespace ATAC
                     }
                 }
             }
+
+
         }
     }
 }
