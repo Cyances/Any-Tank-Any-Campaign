@@ -1,4 +1,4 @@
-## ATAC v1.1.3:
+## ATAC v1.1.4:
 <p>
 	<ul>
 	<li>Choose what vehicle should appear in campaign.</li>
@@ -56,6 +56,9 @@
 | M1IP | M1IP | 
 | FRG |  | 
 | M113G | N113G | 
+| MARDERA1 | Marder A1 | 
+| MARDERA1_NO_ATGM | Marder A1 (No ATGM) | 
+| MARDERA1PLUS | Marder A1+ | 
 | LEO1A1 | Leopard 1A1 | 
 | LEO1A1A3 | Leopard 1A1A2 | 
 | LEO1A1A3 | Leopard 1A1A3 | 
