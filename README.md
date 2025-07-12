@@ -77,6 +77,7 @@
 | T72 | T-72 (Ural) | 
 | T72ULEM | T-72 LEM | 
 | T72UV1 | T-72 ÜV1 | 
+| T72M | T-72M | 
 | T72GILLS | T-72M with (deployed) gills | 
 | T72UV2 | T-72 ÜV2 |
 | T72M1 | T-72M1 |  
